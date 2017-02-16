@@ -1,0 +1,152 @@
+# 用户：
+
+### 1.用户搜索
+
+```
+GET /api/v1/users/search
+```
+
+参数：
+
+| Name | Type | Description |
+| :--- | :--- | :--- |
+| q | string | 必须，用户名关键字 |
+| limit | int | 搜索结果个数限制，默认10 |
+
+例子：
+
+```
+curl http://localhost:3000/api/v1/users/search?q=1&limit=5
+```
+
+响应：
+
+```
+Status: 200 OK
+Content-Type: application/json
+```
+
+```
+{
+    "data": [
+        {
+            "id": 1,
+            "login": "10111",
+            "full_name": "",
+            "email": "",
+            "avatar_url": "https://secure.gravatar.com/avatar/66d1616f2a957bc6e6686658bc3a5e2f",
+            "username": "10111"
+        }
+    ],
+    "ok": true
+}
+```
+
+### 2.获得单个用户信息
+
+```
+GET /api/v1/users/:username
+```
+
+参数：
+
+| Name | Type | Desc |
+| :--- | :--- | :--- |
+| :username | string | 用户名 |
+
+例子：
+
+```
+curl http://localhost:3000/api/v1/users/10111
+```
+
+响应：
+
+```
+Status: 200 OK
+Content-Type: application/json
+```
+
+```
+{
+    "id": 1,
+    "login": "10111",
+    "full_name": "",
+    "email": "",
+    "avatar_url": "https://secure.gravatar.com/avatar/66d1616f2a957bc6e6686658bc3a5e2f",
+    "username": "10111"
+}
+```
+
+### 3.获得已认证的用户
+
+```
+GET /user
+```
+
+### 4.获得用户的访问tokens
+
+> 注意：必须要通过了基础验证。
+
+```
+GET /users/:username/tokens
+```
+
+响应：
+
+```
+Status: 200 OK
+Content-Type: application/json
+```
+
+```
+[
+  {
+    "name": "how are you?",
+    "sha1": "91e52ff55460eeb247e6423c8ca6e770263cdd8d"
+  },
+  {
+    "name": "hi",
+    "sha1": "dd8b56a38a61dc6bb240f2b4fe78ec0eb3fc2a0b"
+  }
+]
+```
+
+### 5.创建一个访问tokens
+
+> 创建tokens要求必须通过了基本的身份验证,。
+
+```
+POST /users/:username/tokens
+```
+
+参数：
+
+| Name | Type | Desc |
+| :--- | :--- | :--- |
+| name | string | tokens的名字 |
+
+例子：
+
+```
+{
+    "name": "gogs"
+}
+```
+
+响应：
+
+```
+Status: 201 Created
+Content-Type: application/json
+```
+
+```
+{
+  "name": "gogs",
+  "sha1": "61d40add61894c11b14049b5ab189dc8f0500aef"
+}
+```
+
+
+
