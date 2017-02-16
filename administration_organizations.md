@@ -61,5 +61,56 @@ POST /api/v1/admin/orgs/:orgname/teams
 | description | string | 描述 |
 | permission | string | 团队所具备的权限等级，可以是\`read\`,\`write\`或者\`admin\`,默认是\`read\` |
 
+例子：
+
+```
+{
+  "name": "new-team",
+  "description": "A new team created by API",
+  "permission": "write"
+}
+```
+
+响应：
+
+```
+Status: 201 Created
+Content-Type: application/json
+```
+
+```
+{
+  "id": 3,
+  "name": "new-team",
+  "description": "A new team created by API",
+  "permission": "write"
+}
+```
+
+### 3.添加团队成员
+
+```
+PUT /admin/teams/:teamid/members/:username
+```
+
+参数：
+
+| Name | Type | Desc |
+| :--- | :--- | :--- |
+| :teamid | int | 团队id |
+| :username | string | 成员的用户名 |
+
+响应：
+
+```
+Status: 204 No Content
+```
+
+### 4.移除团队成员
+
+```
+DELETE /admin/teams/:teamid/members/:username
+```
+
 
 
