@@ -53,5 +53,13 @@ Content-Type: application/json
 POST /api/v1/admin/orgs/:orgname/teams
 ```
 
+参数：
+
+| Name | Type | Desc |
+| :--- | :--- | :--- |
+| name | string | 团队的名字\(必填\) |
+| description | string | 描述 |
+| permission | string | 团队所具备的权限等级，可以是\`read\`,\`write\`或者\`admin\`,默认是\`read\` |
+
 
 
