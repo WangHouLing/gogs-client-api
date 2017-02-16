@@ -47,5 +47,11 @@ Content-Type: application/json
 }
 ```
 
+### 2.给组织添加一个团队
+
+```
+POST /api/v1/admin/orgs/:orgname/teams
+```
+
 
 
