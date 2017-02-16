@@ -89,7 +89,7 @@ GET /user
 > 注意：必须要通过了基础验证。
 
 ```
-GET /users/:username/tokens
+GET /api/v1/users/:username/tokens
 ```
 
 响应：
@@ -117,7 +117,7 @@ Content-Type: application/json
 > 创建tokens要求必须通过了基本的身份验证,。
 
 ```
-POST /users/:username/tokens
+POST /api/v1/users/:username/tokens
 ```
 
 参数：
