@@ -112,5 +112,36 @@ Status: 204 No Content
 DELETE /admin/teams/:teamid/members/:username
 ```
 
+### 5.添加或者更新团队仓库
+
+```
+PUT /admin/teams/:teamid/repos/:reponame
+```
+
+参数：
+
+| Name | Type | Desc |
+| :--- | :--- | :--- |
+| :teamid | int | 团队id |
+| :reponame | string | 仓库的名字 |
+
+响应：
+
+```
+Status: 204 No Content
+```
+
+### 6.移除团队仓库
+
+```
+DELETE /admin/teams/:teamid/repos/:reponame
+```
+
+响应：
+
+```
+Status: 204 No Content
+```
+
 
 
