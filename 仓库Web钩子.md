@@ -9,6 +9,11 @@ GET /api/v1/repos/:username/:reponame/hooks
 响应：
 
 ```
+Status: 200 OK
+Content-Type: application/json
+```
+
+```
 [
   {
     "id": 1,
