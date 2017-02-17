@@ -106,5 +106,25 @@ PATCH /api/v1/repos/:username/:reponame/hooks/:id
 | events | array | 触发事件，同上 |
 | active | bool | 是否触发钩子 |
 
+例子：
+
+```
+{
+    "config": {
+        "url": "http://gogs.io/hook"
+    },
+    "events": [
+        "push"
+    ]
+}
+```
+
+响应：
+
+```
+Status: 200 OK
+Content-Type: application/json
+```
+
 
 
