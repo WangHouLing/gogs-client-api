@@ -126,5 +126,17 @@ Status: 200 OK
 Content-Type: application/json
 ```
 
+### 4.删除钩子
+
+```
+DELETE /api/v1/repos/:username/:reponame/hooks/:id
+```
+
+响应：
+
+```
+Status: 204 No Content
+```
+
 
 
