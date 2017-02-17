@@ -38,5 +38,14 @@ Content-Type: application/json
 POST /api/v1/repos/:username/:reponame/hooks
 ```
 
+参数：
+
+| Name | Type | Desc |
+| :--- | :--- | :--- |
+| type | string | \(必填\)钩子的类型，"gogs"或"slack" |
+| config | object | \(必填\)钩子的配置，健值对 |
+| event | array | 哪些操作触发钩子，"create","push","pull\_request",默认"push" |
+| active | bool | 钩子是否触发 |
+
 
 
