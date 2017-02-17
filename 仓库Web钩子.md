@@ -92,5 +92,19 @@ Content-Type: application/json
 }
 ```
 
+### 3.编辑钩子
+
+```
+PATCH /api/v1/repos/:username/:reponame/hooks/:id
+```
+
+参数：
+
+| Name | Type | Desc |
+| :--- | :--- | :--- |
+| config | object | \(必填\)健值对，同上 |
+| events | array | 触发事件，同上 |
+| active | bool | 是否触发钩子 |
+
 
 
