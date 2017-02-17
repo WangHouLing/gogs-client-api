@@ -32,5 +32,11 @@ Content-Type: application/json
 ]
 ```
 
+### 2.创建钩子
+
+```
+POST /api/v1/repos/:username/:reponame/hooks
+```
+
 
 
