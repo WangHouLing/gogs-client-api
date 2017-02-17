@@ -79,16 +79,16 @@ Content-Type: application/json
 
 ```
 {
-"type": "gogs",
-"config": {
-"content_type": "json",
-"url": "http://127.0.0.1:3000/unknwon/repo1/settings/hooks/24"
+    "type": "gogs",
+    "config": {
+    "content_type": "json",
+    "url": "http://127.0.0.1:3000/unknwon/repo1/settings/hooks/24"
 },
-"events": [
-"push",
-"create"
+    "events": [
+        "push",
+        "create"
 ],
-"active": true
+    "active": true
 }
 ```
 
