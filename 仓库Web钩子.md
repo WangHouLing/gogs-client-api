@@ -5,7 +5,11 @@
 ```
 GET /api/v1/repos/:username/:reponame/hooks
 ```
+例子：
 
+```
+curl -X GET -H "Content-Type: application/json" -H "Authorization: Basic MTAxMTE6aGFuZGhhbmQ=" "http://localhost:3000/api/v1/repos/HIP/go-cas/hooks"
+```
 响应：
 
 ```
@@ -56,7 +60,7 @@ config参数：
 例子：
 
 ```
-{
+curl -X POST -H "Content-Type: application/json" -H "Authorization: Basic MTAxMTE6aGFuZGhhbmQ=" -d '{
     "type": "gogs",
     "config": {
         "url": "http://gogs.io",
@@ -67,7 +71,7 @@ config参数：
         "push"
     ],
     "active": true
-}
+}' "http://localhost:3000/api/v1/repos/HIP/go-cas/hooks"
 ```
 
 响应：
