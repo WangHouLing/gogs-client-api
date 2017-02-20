@@ -5,11 +5,13 @@
 ```
 GET /api/v1/repos/:username/:reponame/hooks
 ```
+
 例子：
 
 ```
 curl -X GET -H "Content-Type: application/json" -H "Authorization: Basic MTAxMTE6aGFuZGhhbmQ=" "http://localhost:3000/api/v1/repos/HIP/go-cas/hooks"
 ```
+
 响应：
 
 ```
