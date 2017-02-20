@@ -113,14 +113,12 @@ PATCH /api/v1/repos/:username/:reponame/hooks/:id
 例子：
 
 ```
-{
-    "config": {
-        "url": "http://gogs.io/hook"
-    },
-    "events": [
-        "push"
-    ]
-}
+curl -X PATCH -H "Content-Type: application/json" -H "Authorization: Basic MTAxMTE6aGFuZGhhbmQ=" -d '{
+"config": {
+"url": "http://gogs.io/hook"
+},
+"events": ["push"]
+}' "http://localhost:3000/api/v1/repos/HIP/go-cas/hooks/24"
 ```
 
 响应：
@@ -134,6 +132,12 @@ Content-Type: application/json
 
 ```
 DELETE /api/v1/repos/:username/:reponame/hooks/:id
+```
+
+例子：
+
+```
+curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Basic MTAxMTE6aGFuZGhhbmQ=" "http://localhost:3000/api/v1/repos/HIP/go-cas/hooks/24"
 ```
 
 响应：
